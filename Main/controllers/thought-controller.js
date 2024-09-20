@@ -13,7 +13,7 @@ const thoughtController = {
       res.status(500).json(err);
     }
   },
-  // get single thought by id
+  // get a thought by id
   async getSingleThought(req, res) {
     try {
       const dbThoughtData = await Thought.findOne({ _id: req.params.thoughtId });
@@ -49,7 +49,7 @@ const thoughtController = {
       res.status(500).json(err);
     }
   },
-  // update thought
+  // update a thought
   async updateThought(req, res) {
     const dbThoughtData = await Thought.findOneAndUpdate({ _id: req.params.thoughtId }, { $set: req.body }, { runValidators: true, new: true });
 
@@ -62,7 +62,7 @@ const thoughtController = {
     console.log(err);
     res.status(500).json(err);
   },
-  // delete thought
+  // delete a thought
   async deleteThought(req, res) {
     try {
       const dbThoughtData = await Thought.findOneAndRemove({ _id: req.params.thoughtId })
@@ -89,7 +89,7 @@ const thoughtController = {
     }
   },
 
-  // add a reaction to a thought
+  // add reaction to thought
   async addReaction(req, res) {
     try {
       const dbThoughtData = await Thought.findOneAndUpdate(
@@ -108,7 +108,7 @@ const thoughtController = {
       res.status(500).json(err);
     }
   },
-  // remove reaction from a thought
+  // remove reaction thought
   async removeReaction(req, res) {
     try {
       const dbThoughtData = await Thought.findOneAndUpdate(
