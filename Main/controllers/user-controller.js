@@ -17,7 +17,6 @@ const userController = {
   async getSingleUser(req, res) {
     try {
       const dbUserData = await User.findOne({ _id: req.params.userId })
-        .select('-__v')
         .populate('friends')
         .populate('thoughts');
 

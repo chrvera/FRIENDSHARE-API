@@ -28,7 +28,8 @@ THEN I am able to successfully create and delete reactions to thoughts and add a
 
 ## Installation
 
-Testing the API requires the user to use the "npm install" command from the terminal. Then the user must start the server by using the "node server.js" command. A walkthrough of testing the API functionality using Insomnia can be found here:
+Testing the API requires the user to use the "npm install" command from the terminal. Then the user must start the server by using the "node server.js" command. A walkthrough of testing the API functionality using Insomnia can be found 
+here: https://app.screencastify.com/v3/watch/nViPbnAunlr98CoR6AZu
 
 ## Contributions
 
